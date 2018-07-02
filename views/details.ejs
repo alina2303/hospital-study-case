@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Wellmeadows Hospital Case</h1>
+
+  <h2>Details of the next-of-kin of the patient <%= patient.name %></h2>
+    <ul>
+      <li><%= patient.next_of_kin.name %> </li>
+      <li><%= patient.next_of_kin.relation %></li>
+      <li><%= patient.next_of_kin.tel %></li>
+    </ul>
+
+</body>
+</html>

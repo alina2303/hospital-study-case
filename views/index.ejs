@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Wellmeadows Hospital Case</h1>
+
+  <h2>Add a new patient</h2>
+
+  <form action="/patients" method="POST" class="patient">
+    <input type="text" placeholder="name" name="name">
+    <br>
+    <input type="text" placeholder="type" name="type">
+    <br>
+    <input type="text" placeholder="ward_id" name="ward_id">
+    <br>
+    <input type="date" placeholder="date_registr" name="date_registr">
+    <br>
+    <input type="text" placeholder="Next of kin name" name="NoKname">
+    <br>
+    <input type="text" placeholder="relation" name="relation">
+    <br>
+    <input type="text" placeholder="phone" name="tel">
+    <br>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+
+  <h2>List of patients</h2>
+  <table class="table">
+      <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Ward</th>
+          <th>Registration</th>
+          <th>Next of kin</th>
+        </tr>
+  <% for (var i=0; i<patients.length; i++) {%>
+    <tr>
+      <td><%= patients[i].name %></td>
+      <td><%= patients[i].type %></td>
+      <td><a href="/ward/<%= patients[i].ward_id %>"><%= patients[i].ward_id %></a></td>
+      <td><%= patients[i].date_registr %></td>
+      <td><a href="/details/<%= patients[i]._id %>"><%= patients[i].next_of_kin.name %></a></td>
+    </tr>
+  <% } %>
+  </table>
+
+
+  <div>
+    <h2>Change patients data</h2>
+    <button id="update-patients"> Make changes</button>
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
