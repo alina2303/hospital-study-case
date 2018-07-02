@@ -1,7 +1,4 @@
-# Repo for Zell's CRUD, Express and MongoDB tutorial
-
-- [Demo](https://crud-express-mongo.herokuapp.com)
-- [Tutorial](http://zell-weekeat.com/crud-express-mongodb)
+# Using MongoDB and Express.js for CRUD operations 
 
 ## Installation
 
@@ -12,4 +9,4 @@
 
 1. run `npm run dev`
 2. Navigate to `localhost:3000`
-3. Have fun ;)
+
